@@ -18,14 +18,8 @@ function App() {
           Learn React
         </a>
         <p>
-          Hello i am jobnovember
+          Feature Login
         </p>
-        <button>
-          Click Here
-        </button>
-        <button>
-          Sign Out
-        </button>
       </header>
     </div>
   );
