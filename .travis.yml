@@ -8,3 +8,14 @@ before_install:
 script:
   - docker run -e CI=true jobpawatkap/docker-react npm run test
 
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-southeast-2"
+  app: "pawatkap-docker-environment"
+  env: "pawatkap-docker-environment"
+  bucket_name: "elasticbeanstalk-ap-southeast-2-248309762609"
+  bucket_path: "pawatkap-docker-environment"
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
